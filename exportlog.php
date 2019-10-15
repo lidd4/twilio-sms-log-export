@@ -8,6 +8,7 @@ $sid = $_POST['sid'];
 $token = $_POST['authToken'];
 $from = $_POST['from'];
 $to = $_POST['to'];
+$fromid = $_POST['fromid'];
 $date = '';
 
 
@@ -76,7 +77,8 @@ foreach ($messages as $sms) {
         $sms->direction,
         $sms->numSegments,
         $sms->price,
-        $sms->body
+        $sms->body,
+        $sms->fromid
     );
 
   echo '"'.implode('","', $row).'"'."\n"; 
