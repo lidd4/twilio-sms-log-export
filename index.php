@@ -46,6 +46,11 @@
                         <input type="text" class="form-control" id="authToken" name="authToken" required>
                     </div>
                     
+                    <div class="form-group">
+                        <label for="fromid">fromid>fromid</a></label>
+                        <input type="text" class="form-control" id="fromid" name="fromid" required>
+                    </div>
+                    
                     <label>If your message logs are massive, consider using a Date Range:</label>
                     
                     <div class="form-group">
