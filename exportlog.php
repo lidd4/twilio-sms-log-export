@@ -61,7 +61,7 @@ header("Content-Type: application/csv");
 header("Content-Disposition: attachment; filename={$filename}");
 
 /* Write headers */
-$fields = array( 'SMS Message SID', 'From', 'To', 'Date Created', 'Date Sent', 'Date Updated', 'Status', 'Direction', 'Message Segments', 'Price', 'Body' );
+$fields = array( 'SMS Message SID', 'From', 'To', 'Date Sent','Status', 'Message Segments', 'Body' );
 echo '"'.implode('","', $fields).'"'."\n";
 
 /* Write rows */
@@ -70,13 +70,13 @@ foreach ($messages as $sms) {
         $sms->sid,
         $sms->from,
         $sms->to,
-        $sms->dateCreated->format('Y-m-d H:i:s'),
+       // $sms->dateCreated->format('Y-m-d H:i:s'),
         $sms->dateSent->format('Y-m-d H:i:s'),
-        $sms->dateCreated->format('Y-m-d H:i:s'),
+       // $sms->dateCreated->format('Y-m-d H:i:s'),
         $sms->status,
-        $sms->direction,
+       // $sms->direction,
         $sms->numSegments,
-        $sms->price,
+        //$sms->price,
         $sms->body,
         $sms->fromid
     );
